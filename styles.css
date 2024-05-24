@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-image: url(bg.jpg);
+    align-items: center;
+    position: relative;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+.top-bar .logo img {
+    width: 150px;
+    height: 150px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation .search {
+    margin-right: 30px;
+}
+
+.navigation .search input {
+    padding: 3px;
+    font-size: 1em;
+    width: 300px;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+nav ul li img {
+    width: 20px;
+    height: 20px;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 4.5em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    background-image: url(mainbg.jpg);
+    opacity: 20;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.card {
+    text-align: center;
+    width: 300px;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3 ease, filter 0.3 ease;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card h2 {
+    margin: 20px 0 10px;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 1.2em;
+    color: #aaa;
+}
+
+.card:hover img {
+    transform: scale(1.2);
+}
+
+.card:not(:hover) img:hover {
+    filter: brightness(0.5);
+}
+@media (min-width: 600px) {
+    header h1 {
+        font-size: 4.5em;
+    }
+    
+    .navigation .search input {
+        width: 300px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+    
+    .card {
+        width: 200px;
+    }
+}
+
+@media (max-width: 599px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation .search {
+        margin: 0 0 10px 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+footer {
+    list-style-type: none;
+    padding: 20px;
+    padding-left: 50px;
+    margin: 0px;
+    text-align: center;
+    background-color: #000;
+    overflow: hidden;
+    font-size: 0.9em;
+}
+nav ul li a:hover{
+color: yellow;
+}
